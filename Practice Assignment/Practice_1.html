@@ -1,0 +1,156 @@
+<html>
+<head>
+<title>Practice_1.ipynb</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #808080;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #6a8759;}
+.s3 { color: #cc7832;}
+.s4 { color: #629755; font-style: italic;}
+.s5 { color: #6897bb;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Practice_1.ipynb</font>
+</center></td></tr></table>
+<pre><span class="s0">#%% md 
+</span><span class="s1"># COMP90016 - Practice Assignment 
+ 
+ 
+</span><span class="s0">#%% md 
+</span><span class="s1">Version 1. Last edited 13/03/2023. 
+</span><span class="s0">#%% 
+### Fill in your student details here</span>
+<span class="s1">NAME = </span><span class="s2">&quot;Rafsan Al Mamun&quot;</span>
+<span class="s1">ID = </span><span class="s2">&quot;1407776&quot;</span>
+<span class="s0">#%% md 
+</span><span class="s1">## Background 
+This practice assignment has been developed so you can trial the assignment submision process. Please submit your completed assignment through turnitin on the LMS as both a Jupyter notebook file and an HTML file. Note that no other files or formats will be accepted. 
+ 
+## Marking 
+ 
+**This practice assignment is not worth any marks. It does not contribute to your final grade.** 
+ 
+Cells that must be completed to receive marks are clearly labelled. Some cells are code cells, in which you must complete the code to solve a problem. Others are markdown cells, in which you must write your answers to short-answer questions.  
+ 
+Cells that must be completed to receive marks are labelled like this: 
+ 
+`# -- GRADED CELL (1 mark) - complete this cell --` 
+ 
+### Completing code cells 
+ 
+- You will see the following text in graded code cells: 
+ 
+``` python 
+# YOUR CODE HERE 
+raise NotImplementedError() 
+``` 
+ 
+- ***You must remove the `raise NotImplementedError()` line from the cell, and replace it with your solution.*** 
+ 
+ 
+- Only add answers to graded cells. If you want to import a library or use a helper function, this must be included in a graded cell. 
+ 
+ 
+- Include code comments in your solutions. Well commented code can help you to receive partial marks even if the final solution is incorrect.  
+ 
+</span><span class="s0">#%% md 
+</span><span class="s1">## Submitting this assignment 
+ 
+Before you turn this assignment in, make sure everything runs as expected. First, **restart the kernel** (in the menubar, select Kernel$\rightarrow$Restart) and then **run all cells** (in the menubar, select Cell$\rightarrow$Run All). 
+ 
+Make sure you have filled in any place that says `YOUR CODE HERE` or &quot;YOUR ANSWER HERE&quot; 
+ 
+ 
+Your completed notebook file containing all your answers must be turned in via LMS in `.ipynb` format. 
+You must also submit a copy of this notebook in `html` format with the output cleared. 
+You can do this by using the `clear all output` option in the menu. 
+ 
+Your submission should include **only two** files with names formatted as: **Practice_1.ipynb** and **Practice_1.html** 
+ 
+</span><span class="s0">#%% md 
+</span><span class="s1">## Task 1 - Squares 
+</span><span class="s0">#%% md 
+</span><span class="s1">&lt;div style=&quot;color: rgb(27,94,32); background: rgb(200,230,201); border: solid 1px rgb(129,199,132); padding: 10px;&quot;&gt; 
+&lt;h3&gt;Question 1&lt;/h3&gt; 
+ 
+&lt;b&gt;Challange:&lt;/b&gt; Write a function that returns a list of numbers, such that $x_i=i^2$, for $1\leq i \leq n$. Make sure it handles the case where $n&lt;1$ by raising a `ValueError`. 
+     
+- [ ] Take as input an int n 
+- [ ] Return a list of squares from 1 to n 
+- [ ] Return a value error if n &lt; 1     
+     
+&lt;/div&gt; 
+ 
+</span><span class="s0">#%% 
+# -- GRADED CELL (2 marks) - complete this cell --</span>
+<span class="s3">def </span><span class="s1">squares(n):</span>
+    <span class="s4">&quot;&quot;&quot;Compute the squares of numbers from 1 to n, such that the  
+    ith element of the returned list equals i^2. 
+     
+    &quot;&quot;&quot;</span>
+    <span class="s0"># YOUR CODE HERE</span>
+    <span class="s3">if </span><span class="s1">n&gt;=</span><span class="s5">1</span><span class="s1">:</span>
+        <span class="s3">return </span><span class="s1">[i**</span><span class="s5">2 </span><span class="s3">for </span><span class="s1">i </span><span class="s3">in </span><span class="s1">range(</span><span class="s5">1</span><span class="s3">, </span><span class="s1">n+</span><span class="s5">1</span><span class="s1">)]</span>
+
+    <span class="s3">else</span><span class="s1">:</span>
+        <span class="s3">raise </span><span class="s1">ValueError</span>
+
+<span class="s0">#%% 
+# --- AUTOGRADING CELL DO NOT EDIT ----</span>
+
+<span class="s2">&quot;&quot;&quot;Check that squares returns the correct output for several inputs&quot;&quot;&quot;</span>
+
+<span class="s3">assert </span><span class="s1">squares(</span><span class="s5">1</span><span class="s1">) == [</span><span class="s5">1</span><span class="s1">]</span>
+<span class="s3">assert </span><span class="s1">squares(</span><span class="s5">2</span><span class="s1">) == [</span><span class="s5">1</span><span class="s3">, </span><span class="s5">4</span><span class="s1">]</span>
+<span class="s3">assert </span><span class="s1">squares(</span><span class="s5">10</span><span class="s1">) == [</span><span class="s5">1</span><span class="s3">, </span><span class="s5">4</span><span class="s3">, </span><span class="s5">9</span><span class="s3">, </span><span class="s5">16</span><span class="s3">, </span><span class="s5">25</span><span class="s3">, </span><span class="s5">36</span><span class="s3">, </span><span class="s5">49</span><span class="s3">, </span><span class="s5">64</span><span class="s3">, </span><span class="s5">81</span><span class="s3">, </span><span class="s5">100</span><span class="s1">]</span>
+<span class="s3">assert </span><span class="s1">squares(</span><span class="s5">11</span><span class="s1">) == [</span><span class="s5">1</span><span class="s3">, </span><span class="s5">4</span><span class="s3">, </span><span class="s5">9</span><span class="s3">, </span><span class="s5">16</span><span class="s3">, </span><span class="s5">25</span><span class="s3">, </span><span class="s5">36</span><span class="s3">, </span><span class="s5">49</span><span class="s3">, </span><span class="s5">64</span><span class="s3">, </span><span class="s5">81</span><span class="s3">, </span><span class="s5">100</span><span class="s3">, </span><span class="s5">121</span><span class="s1">]</span>
+
+<span class="s0">#%% 
+# --- AUTOGRADING CELL DO NOT EDIT ----</span>
+
+<span class="s2">&quot;&quot;&quot;Check that squares raises an error for invalid inputs&quot;&quot;&quot;</span>
+<span class="s3">try</span><span class="s1">:</span>
+    <span class="s1">squares(</span><span class="s5">0</span><span class="s1">)</span>
+<span class="s3">except </span><span class="s1">ValueError:</span>
+    <span class="s3">pass</span>
+<span class="s3">else</span><span class="s1">:</span>
+    <span class="s3">raise </span><span class="s1">AssertionError(</span><span class="s2">&quot;did not raise&quot;</span><span class="s1">)</span>
+
+<span class="s3">try</span><span class="s1">:</span>
+    <span class="s1">squares(-</span><span class="s5">4</span><span class="s1">)</span>
+<span class="s3">except </span><span class="s1">ValueError:</span>
+    <span class="s3">pass</span>
+<span class="s3">else</span><span class="s1">:</span>
+    <span class="s3">raise </span><span class="s1">AssertionError(</span><span class="s2">&quot;did not raise&quot;</span><span class="s1">)</span>
+
+<span class="s0">#%% md 
+</span>
+
+<span class="s1">&lt;div style=&quot;color: rgb(0,96,100); background: rgb(178,235,242); border: solid 1px rgb(77,208,225); padding: 10px;&quot;&gt; 
+ 
+&lt;h3&gt;Question 2:&lt;/h3&gt; 
+ 
+Adam has to manually fix ridiculous file names like `Final-final-draft_Kevin's Assignment 1 (0) (1) (1)&lt;ID =9771827&gt;.ipynb` so that they don't break the grading software. This does not spark joy. 
+ 
+&lt;b&gt;Question:&lt;/b&gt; Reviewing the **Submitting this Assignment** section above - what are the names of the only two files you need to submit for this practice assignment? 
+     
+Answer in the cell below.  
+ 
+**2 marks**, maximum of 50 words 
+  
+&lt;/div&gt; 
+ 
+ 
+ 
+</span><span class="s0">#%% md 
+</span><span class="s1">#### -- GRADED CELL (2 marks) - complete this cell --  
+ 
+YOUR ANSWER HERE 
+Practice_1.ipynb and Practice_1.html</span></pre>
+</body>
+</html>
